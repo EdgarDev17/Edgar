@@ -1,0 +1,32 @@
+import Iprojects from "../interfaces/project"
+  
+  export const projectsData: Iprojects[] = [
+    {
+      id: 1,
+      title: 'Recipe Up: Recipes Website',
+      description:
+        'This website allows user to look for a recipe amoung hundreds of recipes, users are able to save their favorite recipes in their account and share them with their friends',
+      gradient: "from-[#ef4444] to-[#ef4444]",
+      languages: ['NextJS', 'TailwindCSS', 'NodeJS', 'MongoDB', 'PrismaDB'],
+      image: '/static/images/recipe.webp'
+    },
+    {
+      id: 2,
+      title: 'Spotify Profile',
+      description:
+        'This is a web app for visualizing personalized Spotify user data, User can check their top artists, top songs, their playlists and share data with their friends',
+      gradient: "from-[#10b981] to-[#a5b4fc]",
+      languages: ['NextJS', 'TailwindCSS', 'NodeJS', 'MongoDB', 'PrismaDB'],
+      image: '/static/images/music.webp'
+    },
+    {
+      id: 3,
+      title: 'Spotify Profile',
+      description:
+        'This is a web app for visualizing personalized Spotify user data, User can check their top artists, top songs, their playlists and share data with their friends',
+      gradient: 'from-[#10b981] to-[#a5b4fc]',
+      languages: ['NextJS', 'TailwindCSS', 'NodeJS', 'MongoDB', 'PrismaDB'],
+      image: '/static/images/music.webp'
+    },
+  ]
+  
