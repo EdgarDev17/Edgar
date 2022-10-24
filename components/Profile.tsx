@@ -7,10 +7,10 @@ const container = {
 		scale: 1,
 		y: 0,
 		transition: {
-			duration: 0.9,
 			ease: 'easeOut',
 			when: 'beforeChildren',
-			staggerChildren: 0.3,
+			delayChildren: 0.3,
+			staggerChildren: 0.4,
 		},
 	},
 	hidden: {
@@ -21,7 +21,7 @@ const container = {
 }
 
 const item = {
-	visible: { opacity: 1, y: 0 },
+	visible: { opacity: 1, y: 0, transition: {ease: 'easeOut'}},
 	hidden: { opacity: 0, y: '-50%' },
 }
 
@@ -67,7 +67,7 @@ export default function Profile() {
 						</p>
 					</motion.div>
 				</div>
-				<div className='relative mb-8 mr-auto w-[126px] sm:mb-0 sm:w-[400px]'>
+				<motion.div variants={item} className='relative mb-8 mr-auto w-[126px] sm:mb-0 sm:w-[400px]'>
 					<Image
 						alt='Edgardo Rodriguez'
 						height={500}
@@ -77,7 +77,7 @@ export default function Profile() {
 						priority
 						className='rounded-full'
 					/>
-				</div>
+				</motion.div>
 			</motion.div>
 		</>
 	)

@@ -36,9 +36,9 @@ export default function Layout(props) {
 	const { children, ...customMeta } = props
 	const router = useRouter()
 	const meta = {
-		title: 'Edgardo Rodriguez – Software Engineer',
+		title: 'Edgardo Rodriguez - Software Engineer',
 		description: `Front-end developer, I am looking to improve my skills every day.`,
-		image: 'https://leerob.io/static/images/lee-banner.png',
+		image: '/profile.png',
 		type: 'website',
 		...customMeta,
 	}
@@ -76,10 +76,9 @@ export default function Layout(props) {
 			</Head>
 
 			<div className='flex flex-col justify-center px-8'>
+			
+			{/* ADD ANIMATION TO NAVBAR */}
 				<nav className='relative mx-auto flex w-full max-w-2xl items-center justify-between border-gray-200 bg-gray-50 bg-opacity-60 pt-8 pb-8  text-gray-900 dark:border-gray-700  dark:bg-gray-900 dark:text-gray-100 sm:pb-16'>
-					{/* <a href='#skip' className='skip-nav'>
-						Skip to content
-					</a> */}
 					<div className='ml-[-0.60rem]'>
 						<MobileMenu />
 						<NavItem href='/' text='About me' />
