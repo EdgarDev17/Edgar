@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import NextLink from 'next/link'
 import cn from 'classnames'
+import { motion } from 'framer-motion'
 
 function NavItem({ href, text }: { href: string; text: string }) {
 	const router = useRouter()
@@ -44,7 +45,7 @@ export default function Layout(props) {
 	}
 
 	return (
-		<div className='bg-gray-50 dark:bg-gray-900'>
+		<div className='flex h-full w-full flex-col bg-gray-50  dark:bg-gray-900'>
 			<Head>
 				<title>{meta.title}</title>
 				<meta name='robots' content='follow, index' />
@@ -75,17 +76,20 @@ export default function Layout(props) {
 				)}
 			</Head>
 
-			<div className='flex flex-col justify-center px-8'>
-			
-			{/* ADD ANIMATION TO NAVBAR */}
-				<nav className='relative mx-auto flex w-full max-w-2xl items-center justify-between border-gray-200 bg-gray-50 bg-opacity-60 pt-8 pb-8  text-gray-900 dark:border-gray-700  dark:bg-gray-900 dark:text-gray-100 sm:pb-16'>
-					<div className='ml-[-0.60rem]'>
+			<motion.div
+				className='sm:mb-16 sm:mt-12 flex items-center justify-center px-8'
+				initial={{ y: -25, opacity: 0 }}
+				animate={{ y: 0, opacity: 1 }}
+				transition={{ duration: 0.7 }}
+			>
+				<nav className='fixed z-50 mx-auto flex w-full max-w-4xl scroll-mb-5 items-center justify-between border-gray-200  bg-gray-50  pt-5 pb-5  text-gray-900 dark:border-gray-700  dark:bg-gray-900 dark:text-gray-100 sm:pb-5'>
+					<motion.div className=' ml-[-0.60rem]'>
 						<MobileMenu />
 						<NavItem href='/' text='About me' />
-						<NavItem href='/projects' text='Projects' />
-						<NavItem href='/skills' text='My Skills' />
-						<NavItem href='/contact' text='Contact Me' />
-					</div>
+						<NavItem href='#projects-section' text='Projects' />
+						<NavItem href='#skills-section' text='My Skills' />
+						<NavItem href='#contact-section' text='Contact Me' />
+					</motion.div>
 					<button
 						aria-label='Toggle Dark Mode'
 						type='button'
@@ -123,11 +127,9 @@ export default function Layout(props) {
 						)}
 					</button>
 				</nav>
-			</div>
-			<main
-				id='skip'
-				className='flex flex-col justify-center bg-gray-50 dark:bg-gray-900'
-			>
+			</motion.div>
+
+			<main className='flex h-full w-full flex-col justify-center bg-gray-50 dark:bg-gray-900'>
 				{children}
 				<Footer />
 			</main>

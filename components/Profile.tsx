@@ -21,7 +21,7 @@ const container = {
 }
 
 const item = {
-	visible: { opacity: 1, y: 0, transition: {ease: 'easeOut'}},
+	visible: { opacity: 1, y: 0, transition: { ease: 'easeOut' } },
 	hidden: { opacity: 0, y: '-50%' },
 }
 
@@ -34,16 +34,16 @@ export default function Profile() {
 				variants={container}
 				className='flex flex-col-reverse items-start sm:flex-row'
 			>
-				<div className='flex flex-col pr-8'>
+				<div className='mr-5 flex flex-col'>
 					<motion.h1
 						variants={item}
-						className='mb-3 text-3xl font-bold tracking-tight text-black dark:text-white md:mb-5 md:text-5xl'
+						className='mb-3 text-3xl font-bold tracking-tight text-black dark:text-white md:mb-7 md:text-6xl'
 					>
 						Edgardo Rodríguez
 					</motion.h1>
 					<motion.h2
 						variants={item}
-						className='md:text-normal mb-7 text-lg text-gray-900 dark:text-gray-300 md:mb-10 md:text-gray-700 '
+						className='mb-7 text-lg text-gray-900 dark:text-gray-300 md:mb-10 md:text-gray-700 lg:text-xl '
 					>
 						Front End Developer
 					</motion.h2>
@@ -53,21 +53,21 @@ export default function Profile() {
 							Hey there! I am focusing on developing fast,
 							reliable, scalable and cool software. Right now I am
 							focusing on web development mainly on{' '}
-							<span className='text-blue-500 dark:text-blue-300'>
-								ReactJS
-							</span>{' '}
-							or{' '}
-							<span className='text-green-500 dark:text-green-300'>
-								Vue.
+							<span className='font-medium text-blue-600 dark:text-blue-200'>
+								ReactJS.
 							</span>
 						</p>
 						<p className='text-md mb-16 text-justify text-gray-800 dark:text-gray-200'>
 							I have been crafting software for about three years
-							and I am learning new things every single day.
+							and I am always learning new things every single
+							day.
 						</p>
 					</motion.div>
 				</div>
-				<motion.div variants={item} className='relative mb-8 mr-auto w-[126px] sm:mb-0 sm:w-[400px]'>
+				<motion.div
+					variants={item}
+					className='relative mb-8 mr-auto w-[126px] sm:mb-0 sm:w-[400px]'
+				>
 					<Image
 						alt='Edgardo Rodriguez'
 						height={500}
