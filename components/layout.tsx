@@ -77,12 +77,12 @@ export default function Layout(props) {
 			</Head>
 
 			<motion.div
-				className='sm:mb-16 sm:mt-12 flex items-center justify-center px-8'
+				className='mb-16 mt-5 sm:mt-0 flex items-center justify-center'
 				initial={{ y: -25, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.7 }}
 			>
-				<nav className='fixed z-50 mx-auto flex w-full max-w-4xl scroll-mb-5 items-center justify-between border-gray-200  bg-gray-50  pt-5 pb-5  text-gray-900 dark:border-gray-700  dark:bg-gray-900 dark:text-gray-100 sm:pb-5'>
+				<nav className='fixed z-50 mx-auto mt-16 mb-5 flex w-11/12 sm:w-full max-w-4xl scroll-mb-5 items-center justify-between border-gray-200 bg-gray-50 pt-5  pb-5  text-gray-900 dark:border-gray-700  dark:bg-gray-900 dark:text-gray-100  sm:mb-0 sm:pt-12 sm:pb-5'>
 					<motion.div className=' ml-[-0.60rem]'>
 						<MobileMenu />
 						<NavItem href='/' text='About me' />
