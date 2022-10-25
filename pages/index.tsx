@@ -131,7 +131,7 @@ const Home = () => {
 							id='contactme-section'
 							className='flex flex-col items-center justify-center'
 						>
-							<h2 className='mt-20 lg:mt-28 mb-10 text-center text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white md:text-3xl lg:text-4xl'>
+							<h2 className='mt-20 lg:mt-28 mb-10 text-center text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white lg:text-4xl'>
 								Get in touch
 							</h2>
 							<p className='mb-6 font-normal text-gray-500 dark:text-gray-400  text-center'>

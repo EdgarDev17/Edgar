@@ -12,18 +12,15 @@ export default function ProjectCard({
 	languages,
 	image,
 }: Iprojects) {
-	console.log(gradient)
-
 	return (
 		<Link href={`/project/${id}`}>
 			<motion.a
-				initial={{ opacity: 0, y: '-25%' }}
+				initial={{ opacity: 0, y: '-50%' }}
 				whileInView={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.5, delay: 0.1}}
-				whileHover={{ scale: 1.05, transition: { duration: 0.1, ease: 'easeIn' }}}
+				transition={{ duration: 0.7, delay: 0.5}}
+				whileHover={{ scale: 1.05, transition: { duration: 0.5, ease: 'easeIn' }}}
 				viewport={{ once: true }}
-				// className={gradient}
-				className={cn('bg-gradient-to-r from-green-200 to-green-500', 'p-1 rounded-lg')}
+				className={cn('mb-5 bg-gradient-to-r from-green-200 to-green-500', 'p-1 rounded-lg')}
 			>
 				<div className='flex  flex-col items-center rounded-lg bg-white p-4 dark:bg-gray-800'>
 					<div className='block'>
