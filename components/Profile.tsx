@@ -32,12 +32,12 @@ export default function Profile() {
 				initial='hidden'
 				animate='visible'
 				variants={container}
-				className='flex flex-col-reverse items-start sm:flex-row'
+				className='flex flex-col-reverse justify-center items-center sm:flex-row'
 			>
 				<div className='mr-5 flex flex-col'>
 					<motion.h1
 						variants={item}
-						className='mb-3 text-3xl font-bold tracking-tight text-black dark:text-white md:mb-7 md:text-6xl'
+						className=' mb-3 text-3xl font-bold tracking-tight text-black dark:text-white md:mb-7 md:text-6xl'
 					>
 						Edgardo Rodríguez
 					</motion.h1>
@@ -66,7 +66,7 @@ export default function Profile() {
 				</div>
 				<motion.div
 					variants={item}
-					className='relative mb-8 mr-auto w-[126px] sm:mb-0 sm:w-[400px]'
+					className='mr-auto w-[126px] mb-10 sm:mr-0 sm:w-[375px]'
 				>
 					<Image
 						alt='Edgardo Rodriguez'

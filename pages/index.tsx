@@ -56,7 +56,7 @@ const Home = () => {
 					>
 						{/* this needs to be the firt animated element */}
 						<motion.div
-							className='md:mt-28 md:mb-28'
+							className='md:mt-52 md:mb-52'
 							variants={homeItems}
 						>
 							<Profile />
@@ -67,7 +67,7 @@ const Home = () => {
 							id='projects-section'
 							variants={homeItems}
 							transition={{ delay: 1 }}
-							className='mb-8 md:mb-12 text-2xl font-bold tracking-tight text-black dark:text-white md:text-3xl'
+							className='mb-8  text-center text-2xl font-bold tracking-tight text-black dark:text-white md:mb-12 md:text-4xl'
 						>
 							Features Projects
 						</motion.h3>
@@ -104,7 +104,7 @@ const Home = () => {
 						<div>
 							<h3
 								id='skills-section'
-								className='mb-4 mt-16 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl'
+								className='mb-16 mt-16 text-center text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl'
 							>
 								About my skills
 							</h3>
@@ -123,16 +123,26 @@ const Home = () => {
 								with include:
 							</p>
 
-							<div className='mb-10 grid w-full grid-cols-2 items-center justify-center gap-y-12 md:grid-cols-4 md:gap-x-1 '>
+							<div className='mb-32 grid w-full grid-cols-2 items-center justify-center gap-y-12 md:grid-cols-4 md:gap-x-1 '>
 								{renderTechData}
 							</div>
 						</div>
-						<div id='contactme-section'>
-							<h2 className='mb-4 text-center text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white md:text-3xl lg:text-3xl'>
+						<div
+							id='contactme-section'
+							className='flex flex-col items-center justify-center'
+						>
+							<h2 className='mt-20 lg:mt-28 mb-10 text-center text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white md:text-3xl lg:text-4xl'>
 								Get in touch
 							</h2>
-							<p className='mb-6 text-lg font-normal text-gray-500 dark:text-gray-400 sm:px-16 lg:text-xl xl:px-48'>{`I'm looking for new opportunities if `}</p>
-							<button>Send email</button>
+							<p className='mb-6 font-normal text-gray-500 dark:text-gray-400  text-center'>
+								{`Hey! I'm currently looking for new opportunities, so I'd like to talk with you about it, you could send me an email, and I respond to you back as soon as possible.`}
+							</p>
+							<a
+								href='mailto:edgardorodriguezdev@gmail.com'
+								className='mt-10 mb-28 rounded-lg bg-blue-700 px-10 py-3 font-medium text-white hover:scale-[1.05] hover:bg-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+							>
+								Send email
+							</a>
 						</div>
 					</motion.div>
 				</div>
