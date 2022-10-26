@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react'
 import MenuBar from './menu-bar'
 
 export default function Layout(props: any) {
-
 	const { children, ...customMeta } = props
 	const router = useRouter()
 
@@ -18,7 +17,7 @@ export default function Layout(props: any) {
 	}
 
 	return (
-		<div className='flex h-full w-full flex-col bg-gray-50  dark:bg-gray-900'>
+		<div className='bg-gray-50  dark:bg-gray-900'>
 			<Head>
 				<title>{meta.title}</title>
 				<meta name='robots' content='follow, index' />
@@ -49,12 +48,15 @@ export default function Layout(props: any) {
 				)}
 			</Head>
 
-			<MenuBar />
+			<div>
+				<MenuBar />
 
-			<main className='flex h-full w-full flex-col justify-center bg-gray-50 dark:bg-gray-900'>
-				{children}
-				<Footer />
-			</main>
+				<main className=' flex h-full w-full flex-col justify-center bg-gray-50 dark:bg-gray-900'>
+					{children}
+					<Footer />
+				</main>
+			</div>
+	
 		</div>
 	)
 }

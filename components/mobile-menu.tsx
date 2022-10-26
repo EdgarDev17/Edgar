@@ -61,7 +61,7 @@ export default function MobileMenu() {
 						className='border-b border-gray-300 text-sm font-semibold text-gray-900 dark:border-gray-700 dark:text-gray-100'
 						style={{ transitionDelay: '175ms' }}
 					>
-						<Link href='/guestbook'>
+						<Link href='#projects-section'>
 							<a className='flex w-auto pb-4'>Projects</a>
 						</Link>
 					</li>
@@ -69,7 +69,7 @@ export default function MobileMenu() {
 						className='border-b border-gray-300 text-sm font-semibold text-gray-900 dark:border-gray-700 dark:text-gray-100'
 						style={{ transitionDelay: '200ms' }}
 					>
-						<Link href='/dashboard'>
+						<Link href='/#skills-section'>
 							<a className='flex w-auto pb-4'>My Skills</a>
 						</Link>
 					</li>
@@ -77,7 +77,7 @@ export default function MobileMenu() {
 						className='border-b border-gray-300 text-sm font-semibold text-gray-900 dark:border-gray-700 dark:text-gray-100'
 						style={{ transitionDelay: '250ms' }}
 					>
-						<Link href='/blog'>
+						<Link href='#contact-section'>
 							<a className='flex w-auto pb-4'>Contact me</a>
 						</Link>
 					</li>

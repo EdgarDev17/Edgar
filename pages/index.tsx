@@ -56,10 +56,20 @@ const Home = () => {
 					>
 						{/* this needs to be the firt animated element */}
 						<motion.div
-							className='md:mt-52 md:mb-52'
+							className='flex flex-col items-center md:mt-52 md:mb-52'
 							variants={homeItems}
 						>
 							<Profile />
+
+							<svg
+								className='animate-bounce hidden md:block mt-32'
+								xmlns='http://www.w3.org/2000/svg'
+								width='24'
+								height='24'
+								viewBox='0 0 24 24'
+							>
+								<polygon points='12 17.414 3.293 8.707 4.707 7.293 12 14.586 19.293 7.293 20.707 8.707 12 17.414' />
+							</svg>
 						</motion.div>
 
 						{/* second animated element  */}
@@ -104,18 +114,21 @@ const Home = () => {
 						<div>
 							<h3
 								id='skills-section'
-								className='mb-16 mt-16 text-center text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl'
+								className='mb-16 mt-32 text-center text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl'
 							>
 								About my skills
 							</h3>
 							<p className='mb-10 text-gray-600 dark:text-gray-300'>
 								I have been learning how to build software for
-								about three years, every day I spend time
-								learning about best practices, code testing,
-								user accessibility, UI design, and even more!
-								because I like pushing myself up to learn new
-								things about programming every day and grow as a
-								developer.
+								about{' '}
+								<span className='font-bold text-gray-900 dark:text-gray-100'>
+									three years
+								</span>
+								, every day I spend time learning about best
+								practices, code testing, user accessibility, UI
+								design, and even more! because I like pushing
+								myself up to learn new things about programming
+								every day and grow as a developer.
 							</p>
 							<p className='mb-16 text-gray-600 dark:text-gray-300'>
 								Some technologies I{' '}
@@ -128,13 +141,13 @@ const Home = () => {
 							</div>
 						</div>
 						<div
-							id='contactme-section'
+							id='contact-section'
 							className='flex flex-col items-center justify-center'
 						>
-							<h2 className='mt-20 lg:mt-28 mb-10 text-center text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white lg:text-4xl'>
+							<h2 className='mt-20 mb-10 text-center text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white lg:mt-28 lg:text-4xl'>
 								Get in touch
 							</h2>
-							<p className='mb-6 font-normal text-gray-500 dark:text-gray-400  text-center'>
+							<p className='mb-6 text-center font-normal text-gray-500  dark:text-gray-400'>
 								{`Hey! I'm currently looking for new opportunities, so I'd like to talk with you about it, you could send me an email, and I respond to you back as soon as possible.`}
 							</p>
 							<a
