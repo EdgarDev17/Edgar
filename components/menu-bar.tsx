@@ -5,14 +5,17 @@ import MobileMenu from './mobile-menu'
 import cn from 'classnames'
 import { useRouter } from 'next/router'
 import { useTheme } from 'next-themes'
+import { Link } from 'react-scroll'
 
 function NavItem({ href, text }: { href: string; text: string }) {
 	const router = useRouter()
 	const isActive = router.asPath === href
 
 	return (
-		<NextLink href={href}>
-			<a
+			<Link 
+				to={href}
+				spy={true}
+				smooth={true}
 				className={cn(
 					isActive
 						? 'font-semibold text-gray-800 dark:text-gray-200'
@@ -21,8 +24,7 @@ function NavItem({ href, text }: { href: string; text: string }) {
 				)}
 			>
 				<span className='capsize'>{text}</span>
-			</a>
-		</NextLink>
+			</Link>
 	)
 }
 
@@ -56,16 +58,15 @@ export default function MenuBar() {
 				initial={{ y: -25, opacity: 0 }}
 				animate={hidden ? { y: -25, opacity: 0, transition:{duration:0.1, ease:'easeOut'}}: { y: 0, opacity: 1 }}
 				transition={{ duration: 0.7, ease: 'easeInOut' }}
-                // transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
 
 			>
 				<nav className='fixed z-50 mx-auto mt-16 mb-5 flex w-11/12 max-w-4xl scroll-mb-5 items-center justify-between border-gray-200 bg-gray-50 pt-5 pb-5  text-gray-900  dark:border-gray-700 dark:bg-gray-900  dark:text-gray-100 sm:mb-0  sm:w-full sm:pt-12 sm:pb-5'>
 					<motion.div className=' ml-[-0.60rem]'>
 						<MobileMenu />
-						<NavItem href='/' text='About me' />
-						<NavItem href='#projects-section' text='Projects' />
-						<NavItem href='#skills-section' text='My Skills' />
-						<NavItem href='#contact-section' text='Contact Me' />
+						<NavItem key={1} href='/' text='About me' />
+						<NavItem key={2} href='projects' text='Projects' />
+						<NavItem key={3} href='skills' text='My Skills' />
+						<NavItem key={4} href='contact' text='Contact Me' />
 					</motion.div>
 					<button
 						aria-label='Toggle Dark Mode'

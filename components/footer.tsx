@@ -14,11 +14,11 @@ const ExternalLink = ({ href, children, style }: ExternalLinkProps) => (
 
 export default function Footer() {
 	return (
-		<footer className='w-11/12 mx-auto mb-8 flex md:w-full max-w-2xl items-center justify-around border-t-2 border-gray-200 dark:border-gray-700'>
+		<footer className='w-11/12 mx-auto mb-8 py-5 flex md:w-full max-w-2xl items-center justify-around border-t-2 border-gray-200 dark:border-gray-700'>
 			<div>
 				<div className='mt-5 flex  items-center justify-around'>
 					<span className='text-sm text-gray-500 dark:text-gray-400 sm:text-center'>
-						Edgardo Rodriguez Developer
+						Edgardo Rodriguez - Developer
 					</span>
 					<div className='ml-10 flex space-x-6 sm:mt-0 sm:justify-center'>
 						<ExternalLink

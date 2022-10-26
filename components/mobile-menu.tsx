@@ -1,9 +1,10 @@
 import cn from 'classnames'
-import Link from 'next/link'
+// import Link from 'next/link'
+import { Link } from 'react-scroll'
 
 //this module is for adding delay when components needs to unmount
 import useDelayedRender from 'use-delayed-render'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import styles from 'styles/mobile-menu.module.css'
 
 export default function MobileMenu() {
@@ -17,10 +18,10 @@ export default function MobileMenu() {
 	const toggleMenu = () => {
 		if (isMenuOpen) {
 			setIsMenuOpen(false)
-			document.body.style.overflow = ''
+			// document.body.style.overflow = ''
 		} else {
 			setIsMenuOpen(true)
-			document.body.style.overflow = 'hidden'
+			// document.body.style.overflow = 'hidden'
 		}
 	}
 
@@ -53,32 +54,60 @@ export default function MobileMenu() {
 						className='border-b border-gray-300 text-sm font-semibold text-gray-900 dark:border-gray-700 dark:text-gray-100'
 						style={{ transitionDelay: '150ms' }}
 					>
-						<Link href='/'>
-							<a className='flex w-auto pb-4'>About me</a>
+						<Link
+							to={'about'}
+							className='flex w-auto pb-4'
+							smooth={true}
+							offset={50}
+							duration={500}
+							onClick={() => setIsMenuOpen(false)}
+
+						>
+							About me
 						</Link>
 					</li>
 					<li
 						className='border-b border-gray-300 text-sm font-semibold text-gray-900 dark:border-gray-700 dark:text-gray-100'
 						style={{ transitionDelay: '175ms' }}
 					>
-						<Link href='#projects-section'>
-							<a className='flex w-auto pb-4'>Projects</a>
+						<Link
+							to={'projects'}
+							className='flex w-auto pb-4'
+							smooth={true}
+							offset={5}
+							duration={500}
+							onClick={() => setIsMenuOpen(false)}
+						>
+							Projects
 						</Link>
 					</li>
 					<li
 						className='border-b border-gray-300 text-sm font-semibold text-gray-900 dark:border-gray-700 dark:text-gray-100'
 						style={{ transitionDelay: '200ms' }}
 					>
-						<Link href='/#skills-section'>
-							<a className='flex w-auto pb-4'>My Skills</a>
+						<Link
+							to={'skills'}
+							className='flex w-auto pb-4'
+							smooth={true}
+							offset={-15}
+							duration={500}
+							onClick={() => setIsMenuOpen(false)}
+						>
+							Skills
 						</Link>
 					</li>
 					<li
 						className='border-b border-gray-300 text-sm font-semibold text-gray-900 dark:border-gray-700 dark:text-gray-100'
 						style={{ transitionDelay: '250ms' }}
 					>
-						<Link href='#contact-section'>
-							<a className='flex w-auto pb-4'>Contact me</a>
+						<Link
+							to={'contact'}
+							className='flex w-auto pb-4'
+							smooth={true}
+							duration={500}
+							onClick={() => setIsMenuOpen(false)}
+						>
+							Contact me
 						</Link>
 					</li>
 				</ul>

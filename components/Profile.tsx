@@ -32,7 +32,7 @@ export default function Profile() {
 				initial='hidden'
 				animate='visible'
 				variants={container}
-				className='flex flex-col-reverse justify-center items-center sm:flex-row'
+				className='flex flex-col-reverse items-center justify-center sm:flex-row'
 			>
 				<div className='mr-5 flex flex-col'>
 					<motion.h1
@@ -49,7 +49,7 @@ export default function Profile() {
 					</motion.h2>
 
 					<motion.div variants={item}>
-						<p className='text-md mb-3 text-justify text-gray-800 dark:text-gray-300'>
+						<p className='text-md mb-3 md:pr-10 text-justify text-gray-800 dark:text-gray-300'>
 							Hey there! I am focusing on developing fast,
 							reliable, scalable and cool software. Right now I am
 							focusing on web development mainly on{' '}
@@ -57,7 +57,7 @@ export default function Profile() {
 								ReactJS.
 							</span>
 						</p>
-						<p className='text-md mb-16 text-justify text-gray-800 dark:text-gray-200'>
+						<p className='text-md mb-16 md:pr-10 text-justify text-gray-800 dark:text-gray-200'>
 							I have been crafting software for about three years
 							and I am always learning new things every single
 							day.
@@ -66,7 +66,7 @@ export default function Profile() {
 				</div>
 				<motion.div
 					variants={item}
-					className='mr-auto w-[126px] mb-10 sm:mr-0 sm:w-[375px]'
+					className='mr-auto mb-12 lg:mb-10 w-[126px] sm:mr-0 sm:w-[375px]'
 				>
 					<Image
 						alt='Edgardo Rodriguez'

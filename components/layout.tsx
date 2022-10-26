@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Footer from './footer'
 import { useRouter } from 'next/router'
-import { useState, useEffect } from 'react'
 import MenuBar from './menu-bar'
 
 export default function Layout(props: any) {
