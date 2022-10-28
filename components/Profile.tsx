@@ -66,7 +66,7 @@ export default function Profile() {
 				</div>
 				<motion.div
 					variants={item}
-					className='mr-auto mb-12 lg:mb-10 w-[126px] sm:mr-0 sm:w-[375px]'
+					className='mr-auto mt-5  mb-12 lg:mb-10 w-[126px] sm:mr-0 sm:w-[375px]'
 				>
 					<Image
 						alt='Edgardo Rodriguez'
