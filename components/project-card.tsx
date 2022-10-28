@@ -48,7 +48,7 @@ export default function ProjectCard({
 						alt='Web development project preview'
 						height={500}
 						width={500}
-						src={image}
+						src={image as any}
 						className={'mt-5 rounded-lg'}
 					/>
 				</div>

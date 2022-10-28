@@ -30,7 +30,7 @@ function NavItem({ href, text }: { href: string; text: string }) {
 export default function MenuBar() {
 	const [mounted, setMounted] = useState(false)
 	const { resolvedTheme, setTheme } = useTheme()
-	const { scrollY } = useScroll()
+	const { scrollY } = useScroll() as any
 	const [hidden, setHidden] = useState(false)
 
 	useEffect(() => setMounted(true), [])
