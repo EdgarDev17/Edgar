@@ -2,7 +2,8 @@ export default interface Iprojects {
     id: number
     title: string
     description: string
-    gradient: string
+    gradient?: string
     languages: string[]
-    image: string
+    image?: string
+    src?: string
   }

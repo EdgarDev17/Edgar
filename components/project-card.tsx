@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import cn from 'classnames'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Iprojects from '../interfaces/project'
 
@@ -11,10 +11,11 @@ export default function ProjectCard({
 	gradient,
 	languages,
 	image,
+	src
 }: Iprojects) {
 	return (
-		<Link href={`/project/${id}`}>
 			<motion.a
+				href={src}
 				initial={{ opacity: 0, y: '-50%' }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.7, delay: 0.5}}
@@ -31,11 +32,11 @@ export default function ProjectCard({
 							{description}
 						</p>
 					</div>
-
+				
 					<div className='capsize mt-10 flex flex-wrap items-center gap-2 text-gray-800'>
 						{languages.map((item) => (
 							<span
-								key={1}
+								key={item}
 								className='mr-2 rounded bg-indigo-100 px-2.5 py-0.5 text-xs font-semibold text-indigo-800 dark:bg-indigo-200 dark:text-indigo-900'
 							>
 								{item}
@@ -45,13 +46,12 @@ export default function ProjectCard({
 
 					<Image
 						alt='Web development project preview'
-						height={300}
-						width={300}
+						height={500}
+						width={500}
 						src={image}
 						className={'mt-5 rounded-lg'}
 					/>
 				</div>
 			</motion.a>
-		</Link>
 	)
 }

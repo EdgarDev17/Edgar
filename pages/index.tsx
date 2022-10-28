@@ -2,13 +2,14 @@ import Link from 'next/link'
 import Layout from '../components/layout'
 import IconCard from '../components/icon-card'
 import { motion, Variants } from 'framer-motion'
-import { Suspense } from 'react'
+import { Suspense, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import { techData } from '../data/tech-data'
 import { projectsData } from '../data/projects-data'
 import Profile from '../components/Profile'
 import ProjectList from '../components/project-list'
 import { Element } from 'react-scroll'
+
 
 const homeAnimation: Variants = {
 	visible: {
@@ -31,6 +32,14 @@ const homeItems: Variants = {
 
 const Home = () => {
 	let theme = useTheme()
+
+	// use this line of codes for setting default theme
+	// @string 'dark' or 'light'
+
+	// const {setTheme} = useTheme()
+	// useEffect(()=>{
+	// 	setTheme('dark')
+	// },[])
 
 	const renderTechData = techData.map((item) => {
 		let renderIcon: string =
@@ -94,25 +103,26 @@ const Home = () => {
 							</motion.div>
 						</Element>
 
-						<Link href='/projects'>
-							<a className='mt-8 flex h-6  items-center rounded-lg leading-7 text-gray-600 transition-all hover:font-bold hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200'>
-								Check all projects
-								<svg
-									xmlns='http://www.w3.org/2000/svg'
-									fill='none'
-									viewBox='0 0 24 24'
-									className='ml-1 h-6 w-6'
-								>
-									<path
-										stroke='currentColor'
-										strokeLinecap='round'
-										strokeLinejoin='round'
-										strokeWidth={2}
-										d='M17.5 12h-15m11.667-4l3.333 4-3.333-4zm3.333 4l-3.333 4 3.333-4z'
-									/>
-								</svg>
-							</a>
-						</Link>
+						<a
+							href='https://github.com/EdgarDev17?tab=repositories'
+							className='mt-8 flex h-6  items-center rounded-lg leading-7 text-gray-600 transition-all hover:font-bold hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200'
+						>
+							Check all projects
+							<svg
+								xmlns='http://www.w3.org/2000/svg'
+								fill='none'
+								viewBox='0 0 24 24'
+								className='ml-1 h-6 w-6'
+							>
+								<path
+									stroke='currentColor'
+									strokeLinecap='round'
+									strokeLinejoin='round'
+									strokeWidth={2}
+									d='M17.5 12h-15m11.667-4l3.333 4-3.333-4zm3.333 4l-3.333 4 3.333-4z'
+								/>
+							</svg>
+						</a>
 
 						<div>
 							<Element name='skills' id='skills'>

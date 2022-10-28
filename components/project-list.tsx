@@ -20,6 +20,7 @@ export default function ProjectList({ projects }: props) {
 					gradient={gradient}
 					languages={project.languages}
 					image={project.image}
+					src={project.src}
 				/>
 			)
 		})
