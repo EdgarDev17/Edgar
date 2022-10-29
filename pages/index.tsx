@@ -67,7 +67,7 @@ const Home = () => {
 						{/* this needs to be the firt animated element */}
 						<motion.div
 							id='about'
-							className='flex flex-col items-center justify-center  md:mt-52 md:mb-52'
+							className='flex flex-col mt-12 items-center justify-center  md:mt-52 md:mb-52'
 							variants={homeItems}
 						>
 							<Profile />
