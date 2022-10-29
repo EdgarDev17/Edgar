@@ -4,7 +4,7 @@ export const projectsData: Iprojects[] = [
 	{
 		id: 1,
 		title: 'Recipe Up: Recipes Website',
-		src:'https://meetup-edgardev.vercel.app/',
+		src:'https://recipe-one-beta.vercel.app/',
 		description:
 			'This website allows users to look for a recipe amoung hundreds of recipes, users are able to save their favorite recipes in their account and share them with their friends.',
 		gradient: 'from-[#ef4444] to-[#ef4444]',
@@ -22,7 +22,7 @@ export const projectsData: Iprojects[] = [
 	{
 		id: 2,
 		title: 'Spotify Profile',
-		src: 'https://meetup-edgardev.vercel.app/',
+		src: 'https://spotify-music-app-profile.vercel.app/',
 		description:
 			'This is a web app for visualizing personalized Spotify user data, User can check their top artists, top songs, their playlists and share data with their friends',
 		gradient: 'from-[#10b981] to-[#a5b4fc]',
