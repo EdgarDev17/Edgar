@@ -43,8 +43,8 @@ const Home = () => {
 	const renderTechData = techData.map((item) => {
 		let renderIcon: string =
 			theme.resolvedTheme == 'dark' ? item.dark : item.image
-		
-			return (
+
+		return (
 			<IconCard
 				key={item.id}
 				image={renderIcon}
@@ -124,7 +124,12 @@ const Home = () => {
 							</svg>
 						</a>
 
-						<div>
+						<motion.div
+							initial={{ opacity: 0, y: '-50%' }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 1, delay: 0.5 }}
+							viewport={{ once: true }}
+						>
 							<Element name='skills' id='skills'>
 								<h3
 									id='skills-section'
@@ -154,9 +159,17 @@ const Home = () => {
 							<div className='mb-32 grid w-full grid-cols-2 items-center justify-center gap-y-12 md:grid-cols-4 md:gap-x-1 '>
 								{renderTechData}
 							</div>
-						</div>
+						</motion.div>
+
 						<Element name='contact' id='contact'>
-							<div className='flex flex-col items-center justify-center'>
+							<motion.div
+								variants={homeAnimation}
+								initial='hidden'
+								whileInView={{ opacity: 1, y: 0 }}
+								transition={{ duration: 1, delay: 0.5 }}	
+								viewport={{ once: true }}
+								className='flex flex-col items-center justify-center'
+							>
 								<h2 className='mt-20 mb-10 text-center text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white lg:mt-28 lg:text-4xl'>
 									Get in touch
 								</h2>
@@ -169,7 +182,7 @@ const Home = () => {
 								>
 									Send email
 								</a>
-							</div>
+							</motion.div>
 						</Element>
 					</motion.div>
 				</div>
