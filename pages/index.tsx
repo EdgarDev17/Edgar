@@ -10,7 +10,6 @@ import Profile from '../components/Profile'
 import ProjectList from '../components/project-list'
 import { Element } from 'react-scroll'
 
-
 const homeAnimation: Variants = {
 	visible: {
 		opacity: 1,
@@ -43,8 +42,9 @@ const Home = () => {
 
 	const renderTechData = techData.map((item) => {
 		let renderIcon: string =
-			theme.resolvedTheme === 'dark' ? item.dark : item.image
-		return (
+			theme.resolvedTheme == 'dark' ? item.dark : item.image
+		
+			return (
 			<IconCard
 				key={item.id}
 				image={renderIcon}
@@ -67,7 +67,7 @@ const Home = () => {
 						{/* this needs to be the firt animated element */}
 						<motion.div
 							id='about'
-							className='flex flex-col mt-12 items-center justify-center  md:mt-52 md:mb-52'
+							className='mt-12 flex flex-col items-center justify-center  md:mt-52 md:mb-52'
 							variants={homeItems}
 						>
 							<Profile />

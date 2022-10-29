@@ -31,7 +31,7 @@ export const techData: IconCardModel[] = [
 	{
 		id: 4,
 		name: 'Python',
-		imageAlt: 'MongoDB icon',
+		imageAlt: 'Python icon',
 		image: '/static/images/technologies/python-icon.svg',
 		dark: '/static/images/technologies/python-icon.svg',
 		
