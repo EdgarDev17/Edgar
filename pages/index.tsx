@@ -107,7 +107,7 @@ const Home = () => {
 							href='https://github.com/EdgarDev17?tab=repositories'
 							className='mt-8 flex h-6  items-center rounded-lg leading-7 text-gray-600 transition-all hover:font-bold hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200'
 						>
-							Check all projects
+							Check all projects on GitHub
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								fill='none'
@@ -166,10 +166,20 @@ const Home = () => {
 								variants={homeAnimation}
 								initial='hidden'
 								whileInView={{ opacity: 1, y: 0 }}
-								transition={{ duration: 1, delay: 0.5 }}	
+								transition={{ duration: 1, delay: 0.5 }}
 								viewport={{ once: true }}
 								className='flex flex-col items-center justify-center'
 							>
+								{/* <motion.div
+									animate={{ scale: [1, 1.5, 1.7, 2, 1.5, 1] }}
+									transition={{ delay: 0, duration:5, repeat: Infinity }}
+									className='absolute mb-8 ml-52 h-32 w-32 items-center justify-center rounded-full bg-gradient-to-r from-blue-300 to-purple-300 mix-blend-multiply blur-2xl filter'
+								></motion.div>
+								<motion.div 
+									animate={{ scale: [1, 1.5, 1.7, 2, 1.5, 1] }}
+									transition={{ delay: 0.5, duration:5, repeat: Infinity }}
+									className='absolute mb-8 mr-24 h-32 w-32 items-center  justify-center rounded-full bg-gradient-to-r from-green-300 to-purple-300 mix-blend-multiply blur-2xl filter'></motion.div> */}
+
 								<h2 className='mt-20 mb-10 text-center text-3xl font-bold leading-none tracking-tight text-gray-900 dark:text-white lg:mt-28 lg:text-4xl'>
 									Get in touch
 								</h2>

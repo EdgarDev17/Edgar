@@ -14,6 +14,7 @@ export default function ProjectCard({
 	src
 }: Iprojects) {
 	return (
+		<>
 			<motion.a
 				href={src}
 				initial={{ opacity: 0, y: '-50%' }}
@@ -30,6 +31,7 @@ export default function ProjectCard({
 						</h4>
 						<p className='text-gray-900 dark:text-gray-200'>
 							{description}
+							
 						</p>
 					</div>
 				
@@ -53,5 +55,7 @@ export default function ProjectCard({
 					/>
 				</div>
 			</motion.a>
+		</>
+
 	)
 }
