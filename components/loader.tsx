@@ -20,7 +20,7 @@ export default function Loader({
 					y: '-50',
 					transition: { duration: 1.5, ease: 'easeOut' },
 				}}
-				className='flex h-screen w-full items-center justify-center'
+				className='flex h-screen overflow-hidden w-full items-center justify-center bg-gray-50 dark:bg-gray-900'
 				onAnimationComplete={() => {
 					loading(false)
 				}}

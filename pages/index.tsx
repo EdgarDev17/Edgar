@@ -59,7 +59,7 @@ const Home = () => {
 			<LayoutGroup>
 				<AnimatePresence>
 					{loading ? (
-						<motion.div key='loader'>
+						<motion.div key='loader' className='overflow-y-hidden'>
 							<Loader loading={handleLoading} />
 						</motion.div>
 					) : (

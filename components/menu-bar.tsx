@@ -50,13 +50,22 @@ export default function MenuBar() {
 		return scrollY.onChange(() => onUpdate())
 	}, [scrollY, hidden])
 
+
+	// const menu =
+	// {
+	// 	initial: { opacity: 0, y: '-25' },
+	// 	animate: { opacity: 1, y: 0 },
+	// 	transition: {duration: 1, ease: 'easeOut', delay: 0.5}
+	// }
+
 	return (
 		<>
 			<motion.div
-				className='mb-16 mt-5 flex items-center justify-center sm:mt-0'
+				// variants={menu}
+				className='mb-16 pt-10 md:pt-5 flex items-center justify-center sm:mt-0'
 				initial={{ y: -25, opacity: 0 }}
 				animate={hidden ? { y: -25, opacity: 0, transition:{duration:0.1, ease:'easeIn'}}: { y: 0, opacity: 1 }}
-				transition={{ duration: 0.7, ease: 'easeInOut' }}
+				transition={{ duration: 1, ease: 'easeIn', delay: 1.5 }}
 
 			>
 				<nav className='fixed z-50 mx-auto mt-16 mb-5 flex w-11/12 max-w-4xl scroll-mb-5 items-center justify-between border-gray-200 bg-gray-50 pt-5 pb-5  text-gray-900  dark:border-gray-700 dark:bg-gray-900  dark:text-gray-100 sm:mb-0  sm:w-full sm:pt-12 sm:pb-5'>

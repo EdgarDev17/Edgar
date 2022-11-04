@@ -36,7 +36,7 @@ export default function Profile() {
 			>
 				<div className='mr-5 flex flex-col'>
 					<motion.h1
-						// layoutId='titleName'
+						layoutId='titleName'
 						variants={item}
 						className=' mb-3 text-3xl font-bold tracking-tight text-black dark:text-white md:mb-7 md:text-6xl'
 					>
