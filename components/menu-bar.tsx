@@ -55,7 +55,7 @@ export default function MenuBar() {
 			<motion.div
 				className='mb-16 mt-5 flex items-center justify-center sm:mt-0'
 				initial={{ y: -25, opacity: 0 }}
-				animate={hidden ? { y: -25, opacity: 0, transition:{duration:0.1, ease:'easeOut'}}: { y: 0, opacity: 1 }}
+				animate={hidden ? { y: -25, opacity: 0, transition:{duration:0.1, ease:'easeIn'}}: { y: 0, opacity: 1 }}
 				transition={{ duration: 0.7, ease: 'easeInOut' }}
 
 			>

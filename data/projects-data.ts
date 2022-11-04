@@ -21,24 +21,6 @@ export const projectsData: Iprojects[] = [
 	},
 	{
 		id: 2,
-		title: 'Spotify Profile',
-		src: 'https://spotify-music-app-profile.vercel.app/',
-		description:
-			'This is a web app for visualizing personalized Spotify user data, User can check their top artists, top songs, their playlists and share data with their friends',
-		gradient: 'from-[#10b981] to-[#a5b4fc]',
-		languages: [
-			'NextJS',
-			'TailwindCSS',
-			'NodeJS',
-			'MongoDB',
-			'PrismaDB',
-			'NextAuth',
-      'Framer Motion'
-		],
-		image: '/static/images/music.png',
-	},
-	{
-		id: 3,
 		title: 'Videocalls Meeting',
 		src:'https://meetup-edgardev.vercel.app/',
 		description:
@@ -54,5 +36,23 @@ export const projectsData: Iprojects[] = [
 			'Framer Motion',
 		],
 		image: '/static/images/videocall.png',
+	},
+	{
+		id: 3,
+		title: 'Spotify Profile',
+		src: 'https://spotify-music-app-profile.vercel.app/',
+		description:
+			'This is a web app for visualizing personalized Spotify user data, User can check their top artists, top songs, their playlists and share data with their friends',
+		gradient: 'from-[#10b981] to-[#a5b4fc]',
+		languages: [
+			'NextJS',
+			'TailwindCSS',
+			'NodeJS',
+			'MongoDB',
+			'PrismaDB',
+			'NextAuth',
+      'Framer Motion'
+		],
+		image: '/static/images/music.png',
 	},
 ]
