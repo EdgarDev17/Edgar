@@ -20,6 +20,8 @@ export default function Layout(props: any) {
 			<Head>
 				<title>{meta.title}</title>
 				<meta name='robots' content='follow, index' />
+				<meta charSet="UTF-8"/>
+
 				<meta content={meta.description} name='description' />
 				<meta
 					property='og:url'
@@ -49,7 +51,7 @@ export default function Layout(props: any) {
 
 			<div>
 				<MenuBar />
-				<main className='flex w-full flex-col justify-center'>
+				<main className='mt-32 md:mt-0 flex w-full flex-col justify-center'>
 					{children}
 					<Footer />
 				</main>

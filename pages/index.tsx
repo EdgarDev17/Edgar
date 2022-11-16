@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Layout from '../components/layout'
 import IconCard from '../components/icon-card'
 import { AnimatePresence, LayoutGroup, motion, Variants } from 'framer-motion'
@@ -16,7 +15,6 @@ const homeAnimation: Variants = {
 		opacity: 1,
 		transition: {
 			duration: 1.5,
-			ease: 'easeIn',
 			when: 'beforeChildren',
 			delay: 1,
 			staggerChildren: 0.1,
@@ -27,14 +25,13 @@ const homeAnimation: Variants = {
 }
 
 const homeItems: Variants = {
-	visible: { opacity: 1, y: 0 },
-	hidden: { opacity: 0, y: -50 },
+	visible: { opacity: 1 },
+	hidden: { opacity: 0 },
 }
 
 const Home = () => {
 	let theme = useTheme()
 	const [loading, setLoading] = useState(true)
-
 
 	const renderTechData = techData.map((item) => {
 		let renderIcon: string =
@@ -64,19 +61,31 @@ const Home = () => {
 						</motion.div>
 					) : (
 						<Layout>
-							<div className='mx-auto h-full w-11/12 max-w-4xl border-gray-200  dark:border-gray-700'>
+							<div className='h-full mx-auto max-w-4xl overflow-x-hidden border-gray-200 w-11/12 dark:border-gray-700'>
 								{/* container */}
 								<motion.div
 									initial='hidden'
 									animate='visible'
 									variants={homeAnimation}
 								>
-									{/* this needs to be the firt animated element */}
 									<motion.div
 										id='about'
-										className='mt-12 flex flex-col items-center justify-center  md:mt-52 md:mb-52'
+										className='relative mt-12 flex w-full flex-col items-center justify-center  md:mt-52 md:mb-52'
 										variants={homeItems}
 									>
+										{/* background blob
+										<motion.circle
+											className='absolute top-10 left-52 h-52 w-52  bg-gradient-to-b  from-pink-300 via-red-300 to-yellow-300 opacity-70  blur-3xl filter dark:from-indigo-500 dark:via-purple-500 dark:to-pink-300 '
+											animate={{
+												x: [0, -250, -100, 0, 100, 150],
+												y: [0, 35, 0, -35, 35],
+											}}
+											transition={{
+												duration: 5,
+												yoyo: Infinity,
+											}}
+										/> */}
+
 										<Profile />
 
 										<svg
@@ -95,14 +104,14 @@ const Home = () => {
 									<Element name='projects' id='projects'>
 										<motion.h3
 											variants={homeItems}
-											transition={{ delay: 1 }}
+											transition={{ delay: 2.5 }}
 											className='mb-8  text-center text-2xl font-bold tracking-tight text-black dark:text-white md:mb-12 md:text-4xl'
 										>
 											Features Projects
 										</motion.h3>
 										{/* third animated element */}
 										<motion.div
-											transition={{ delay: 1 }}
+											transition={{ delay: 2.5 }}
 											variants={homeItems}
 											className='flex w-full flex-col gap-y-7'
 										>
@@ -136,7 +145,7 @@ const Home = () => {
 									<motion.div
 										initial={{ opacity: 0, y: '-50%' }}
 										whileInView={{ opacity: 1, y: 0 }}
-										transition={{ duration: 1, delay: 0.5 }}
+										transition={{ duration: 1.5, delay: 0.5 }}
 										viewport={{ once: true }}
 									>
 										<Element name='skills' id='skills'>
@@ -147,7 +156,7 @@ const Home = () => {
 												About my skills
 											</h3>
 										</Element>
-										<p className='mb-10 text-gray-600 dark:text-gray-300'>
+										<p className='mb-10 text-gray-600 dark:text-gray-300 text-left'>
 											I have been learning how to build
 											software for about{' '}
 											<span className='font-bold text-gray-900 dark:text-gray-100'>
@@ -212,10 +221,10 @@ const Home = () => {
 
 export default Home
 
-	// use this line of codes for setting default theme
-	// @string 'dark' or 'light'
+// use this line of codes for setting default theme
+// @string 'dark' or 'light'
 
-	// const {setTheme} = useTheme()
-	// useEffect(()=>{
-	// 	setTheme('dark')
-	// },[])
+// const {setTheme} = useTheme()
+// useEffect(()=>{
+// 	setTheme('dark')
+// },[])

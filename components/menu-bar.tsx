@@ -11,19 +11,20 @@ function NavItem({ href, text }: { href: string; text: string }) {
 	const isActive = router.asPath === href
 
 	return (
-			<Link 
-				to={href}
-				spy={true}
-				smooth={true}
-				className={cn('cursor-pointer',
-					isActive
-						? 'font-semibold text-gray-800 dark:text-gray-200 '
-						: 'font-normal text-gray-600 dark:text-gray-400',
-					'hidden rounded-lg p-1 transition-all hover:bg-gray-100 hover:text-blue-500 dark:hover:text-green-100 dark:hover:bg-gray-800 sm:px-3 sm:py-2 md:inline-block'
-				)}
-			>
-				<span className='capsize'>{text}</span>
-			</Link>
+		<Link
+			to={href}
+			spy={true}
+			smooth={true}
+			className={cn(
+				'cursor-pointer',
+				isActive
+					? 'font-semibold text-gray-800 dark:text-gray-200 '
+					: 'font-normal text-gray-600 dark:text-gray-400',
+				'hidden rounded-lg p-1 transition-all hover:bg-gray-200 hover:text-blue-500 dark:hover:bg-gray-800 dark:hover:text-green-100 sm:px-3 sm:py-2 md:inline-block'
+			)}
+		>
+			<span className='capsize'>{text}</span>
+		</Link>
 	)
 }
 
@@ -46,26 +47,24 @@ export default function MenuBar() {
 				setHidden(true)
 			}
 		}
-        
+
 		return scrollY.onChange(() => onUpdate())
 	}, [scrollY, hidden])
 
-
-	const menu =
-	{
-		'closed': { opacity: 0, y: '-25',transition:{duration:0.1}},
-		'opened': { opacity: 1, y: 0,transition:{duration:0.1} },
+	const menu = {
+		closed: { opacity: 0, y: '-25', transition: { duration: 0.1 } },
+		opened: { opacity: 1, y: 0, transition: { duration: 0.1 } },
 	}
 
 	return (
 		<>
 			<motion.div
 				variants={menu}
-				className='mb-16 pt-10 md:pt-5 flex items-center justify-center sm:mt-0'
+				className='mb-16 flex items-center justify-center pt-10 sm:mt-0 md:pt-5'
 				initial={false}
-				animate={hidden ? 'closed': 'opened'}	
+				animate={hidden ? 'closed' : 'opened'}
 			>
-				<nav className='fixed z-50 mx-auto mt-16 mb-5 flex w-11/12 max-w-4xl scroll-mb-5 items-center justify-between border-gray-200 bg-gray-50 pt-5 pb-5  text-gray-900  dark:border-gray-700 dark:bg-gray-900  dark:text-gray-100 sm:mb-0  sm:w-full sm:pt-12 sm:pb-5'>
+				<nav className='fixed z-50 mx-auto mt-20 flex w-11/12 max-w-4xl scroll-mb-5 items-center justify-between border-gray-200 pt-5 pb-5  text-gray-900  dark:border-gray-700  dark:text-gray-100 sm:mb-0  sm:w-full sm:pt-12 sm:pb-5'>
 					<motion.div className=' ml-[-0.60rem]'>
 						<MobileMenu />
 						<NavItem key={1} href='about' text='About me' />
@@ -73,6 +72,7 @@ export default function MenuBar() {
 						<NavItem key={3} href='skills' text='My Skills' />
 						<NavItem key={4} href='contact' text='Contact Me' />
 					</motion.div>
+
 					<button
 						aria-label='Toggle Dark Mode'
 						type='button'

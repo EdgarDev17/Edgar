@@ -19,7 +19,7 @@ export default function ProjectCard({
 				href={src}
 				initial={{ opacity: 0, y: '-50%' }}
 				whileInView={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.7, delay: 0.5}}
+				transition={{ duration: 1, delay: 0.3}}
 				whileHover={{ scale: 1.05, transition: { duration: 0.5, ease: 'easeIn' }}}
 				viewport={{ once: true }}
 				className={cn('mb-5 bg-gradient-to-r from-green-200 to-green-500', 'p-1 rounded-lg')}
