@@ -61,7 +61,7 @@ const Home = () => {
 						</motion.div>
 					) : (
 						<Layout>
-							<div className='h-full mx-auto max-w-4xl overflow-x-hidden border-gray-200 w-11/12 dark:border-gray-700'>
+							<div className='mx-auto h-full w-11/12 max-w-4xl overflow-x-hidden border-gray-200 dark:border-gray-700'>
 								{/* container */}
 								<motion.div
 									initial='hidden'
@@ -73,8 +73,8 @@ const Home = () => {
 										className='relative mt-12 flex w-full flex-col items-center justify-center  md:mt-52 md:mb-52'
 										variants={homeItems}
 									>
-										{/* background blob
-										<motion.circle
+										{/* background blob */}
+										{/* <motion.circle
 											className='absolute top-10 left-52 h-52 w-52  bg-gradient-to-b  from-pink-300 via-red-300 to-yellow-300 opacity-70  blur-3xl filter dark:from-indigo-500 dark:via-purple-500 dark:to-pink-300 '
 											animate={{
 												x: [0, -250, -100, 0, 100, 150],
@@ -145,7 +145,10 @@ const Home = () => {
 									<motion.div
 										initial={{ opacity: 0, y: '-50%' }}
 										whileInView={{ opacity: 1, y: 0 }}
-										transition={{ duration: 1.5, delay: 0.5 }}
+										transition={{
+											duration: 1.5,
+											delay: 0.5,
+										}}
 										viewport={{ once: true }}
 									>
 										<Element name='skills' id='skills'>
@@ -156,7 +159,7 @@ const Home = () => {
 												About my skills
 											</h3>
 										</Element>
-										<p className='mb-10 text-gray-600 dark:text-gray-300 text-left'>
+										<p className='mb-10 text-left text-gray-600 dark:text-gray-300'>
 											I have been learning how to build
 											software for about{' '}
 											<span className='font-bold text-gray-900 dark:text-gray-100'>

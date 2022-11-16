@@ -41,7 +41,7 @@ export default function Profile() {
 					<motion.h1
 						layoutId='titleName'
 						variants={item}
-						className='mb-3 bg-black bg-transparent bg-clip-text py-3 text-4xl font-bold tracking-tight  dark:text-white md:mb-3 md:text-7xl'
+						className='mb-3 bg-black bg-transparent bg-clip-text py-3 text-3xl sm:text-5xl font-bold tracking-tight  dark:text-white md:mb-3 md:text-7xl'
 					>
 						Edgardo Rodriguez
 					</motion.h1>
