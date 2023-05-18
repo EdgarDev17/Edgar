@@ -73,21 +73,7 @@ const Home = () => {
 										className='relative mt-12 flex w-full flex-col items-center justify-center  md:mt-52 md:mb-52'
 										variants={homeItems}
 									>
-										{/* background blob */}
-										{/* <motion.circle
-											className='absolute top-10 left-52 h-52 w-52  bg-gradient-to-b  from-pink-300 via-red-300 to-yellow-300 opacity-70  blur-3xl filter dark:from-indigo-500 dark:via-purple-500 dark:to-pink-300 '
-											animate={{
-												x: [0, -250, -100, 0, 100, 150],
-												y: [0, 35, 0, -35, 35],
-											}}
-											transition={{
-												duration: 5,
-												yoyo: Infinity,
-											}}
-										/> */}
-
 										<Profile />
-
 										<svg
 											className='hidden animate-bounce dark:text-white md:block lg:mt-32'
 											fill='#374151'
@@ -107,7 +93,7 @@ const Home = () => {
 											transition={{ delay: 2.5 }}
 											className='mb-8  text-center text-2xl font-bold tracking-tight text-black dark:text-white md:mb-12 md:text-4xl'
 										>
-											Features Projects
+											My Projects
 										</motion.h3>
 										{/* third animated element */}
 										<motion.div

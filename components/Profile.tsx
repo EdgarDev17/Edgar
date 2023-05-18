@@ -37,6 +37,19 @@ export default function Profile() {
 				variants={container}
 				className='flex flex-col sm:flex-row'
 			>
+					<motion.div
+					variants={item}
+					className=' mb-5 w-[200px] sm:w-[350px] md:hidden'
+				>
+					<Image
+						alt='Edgardo Rodriguez'
+						height={700}
+						width={700}
+						src='/avatar.png'
+						priority
+						className='rounded-full'
+					/>
+				</motion.div>
 				<div className='mr-5 flex flex-col'>
 					<motion.h1
 						layoutId='titleName'
@@ -76,13 +89,13 @@ export default function Profile() {
 
 				<motion.div
 					variants={item}
-					className='mr-auto mt-5 mb-12 hidden h-full w-[200px] sm:mr-0 sm:w-[350px]'
+					className='mr-auto mt-5 mb-12 h-full w-[200px] sm:mr-0 sm:w-[350px] hidden md:block	'
 				>
 					<Image
 						alt='Edgardo Rodriguez'
-						height={500}
-						width={500}
-						src='/avatar.jpg'
+						height={700}
+						width={700}
+						src='/avatar.png'
 						priority
 						className='rounded-full'
 					/>
